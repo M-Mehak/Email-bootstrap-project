@@ -1,0 +1,261 @@
+body {
+    background-color: #b3b7ee;
+}
+.navbar-in-the-top {
+    background-color: #9398e6;
+    padding: 10px 15px;
+   
+}
+.compose-button-in-the-nav-bar{
+    min-width: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+.left-section {
+    background-color: #b3b7ee;
+    padding-top: 20px;
+    height: 100vh;
+    
+}
+
+
+/* styling for left section and off canvas items */
+.side-bar-items {
+    color: #fbf9ff;
+    font-size: 20px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    min-width: 100px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.side-bar-items:hover,
+.side-bar-items.spam:hover,
+.side-bar-items.all-inbox:hover,
+.side-bar-items.account:hover,
+.side-bar-items.compose:hover {
+    background-color: #fbf9ff;
+    color: #9395d3;
+    border-color: #fbf9ff;
+}
+
+
+.left-section .side-bar-items:focus, 
+.left-section .side-bar-items.spam:focus, 
+.left-section .side-bar-items.all-inbox:focus, 
+.left-section .side-bar-items.account:focus, 
+.left-section 
+.side-bar-items.compose:focus {
+    background-color: #fbf9ff;
+    color: #9395d3;
+    border-color: #fbf9ff;
+    outline: none;
+}
+
+
+
+.side-bar-items.more {
+    color: #fbf9ff;
+    font-size: 19px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 25px;
+    min-width: 30px;
+    border-radius: 10px;
+}
+
+.side-bar-items.more:hover,
+.side-bar-items.more:focus {
+    background-color: #fbf9ff;
+    color: #9395d3;
+    border-color: #fbf9ff;
+}
+
+.side-bar-items.more:active,
+.side-bar-items.more.active {
+    background-color: #fbf9ff;
+    color: #9395d3;
+    border-color: #fbf9ff;
+}
+
+.side-bar-items.more:focus,
+.side-bar-items.more:active,
+.side-bar-items.more.active {
+    outline: none;
+}
+
+
+/* middle section */
+.middle-section {
+    background-color: #c9c9e9;
+    overflow-y: auto;
+    height: calc(100vh - 56px); 
+    position: relative;
+}
+
+.message-container {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.email-list-container {
+    position: relative;
+}
+
+.email-list {
+    margin: 10px;
+}
+
+.email-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.email-item:hover {
+    background-color: #e8eaf0;
+    cursor: pointer;
+}
+
+.email-subject {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.email-sender {
+    color: #9395d3;
+    margin-bottom: 5px;
+}
+
+.email-preview {
+    color: #555555;
+}
+
+.reply-button-in-the-middle-section, 
+.reply-button-in-the-middle-section:hover {
+    background-color: #9398e6;
+    border:none;
+    width: 110px;
+    height: 50px;
+    font-size: 19px;
+}
+
+.reply-content-in-the-middle-section {
+    margin-top: 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.9);
+}
+
+
+
+
+/* right section */
+.right-section {
+    background-color: #b3b7ee;
+    min-height: 100vh; 
+    padding-top: 25px;
+
+}
+
+
+
+/* the compose and reply button on right section */
+.costom-button1 {
+    background-color: transparent;
+    border-color: #fbf9ff;
+    width: 150px;
+    border-radius: 12px;
+    transition: 0.35s;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 30px;
+} 
+.costom-button1:hover {
+    background-color: #fbf9ff;
+    color: #9395d3;
+    border-color: #fbf9ff;
+}
+
+
+
+
+/* the send button in compose and reply */
+.send {
+    padding: 10px 20px;
+    border: 1px solid #9395d3;
+    transition: 0.35s;
+}
+.send:hover {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #9395d3;
+    color: #fbf9ff;
+}
+.send:active {
+    box-shadow: none ;
+    padding: 9px 18px;
+
+}
+
+
+
+/* off canvas */
+.canvas1{
+    background-color: #b3b7ee;
+    height: 400px;
+    border-radius: 20px;
+}
+.canvas-in-compose {
+    background-color: #b3b7ee;
+    height: 450px;
+    border-radius: 15px;
+}
+
+#magnifying-glass{
+    color: #fbf9ff;
+    font-size: 20px;
+}
+.search-bar {
+    border: none;
+    border-radius: 20px;
+}
+
+
+/* for making the left section get more width smoothly */
+@media (max-width: 767px) {
+    .left-section:hover {
+        position: relative;
+        width: 25%;
+        z-index: 2;
+        transition: width 0.2s ease-in-out;
+    }
+    
+    .left-section:hover ~ .middle-section {
+        width: 75%;
+        transition: width 0.2s ease-in-out;
+    }
+    .search-bar {
+        width: 100%; /* Full width */
+        max-width: 300px; /* Maximum width of 300px */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Large screen */
+    .search-bar {
+        width: 500px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 668px) {
+    /* Medium screen */
+    .search-bar {
+        width: 400px;
+    }
+}

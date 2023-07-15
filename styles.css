@@ -95,7 +95,8 @@ body {
 .middle-section {
     background-color: #c9c9e9;
     overflow-y: auto;
-    height: calc(100vh - 56px); 
+    margin-top: 10px;
+    height: calc(100vh - 156px); 
     position: relative;
 }
 
@@ -159,7 +160,6 @@ body {
 /* right section */
 .right-section {
     background-color: #b3b7ee;
-    min-height: 100vh; 
     padding-top: 25px;
 
 }
@@ -240,10 +240,7 @@ body {
         width: 75%;
         transition: width 0.2s ease-in-out;
     }
-    .search-bar {
-        width: 100%; /* Full width */
-        max-width: 300px; /* Maximum width of 300px */
-    }
+    
 }
 
 @media (min-width: 992px) {
@@ -257,5 +254,14 @@ body {
     /* Medium screen */
     .search-bar {
         width: 400px;
+    }
+}
+
+@media (max-width: 350px) {
+    .search-bar {
+        width: 150px;
+    }
+    .the-magnifying-glass {
+        display: none;
     }
 }
